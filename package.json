@@ -1,0 +1,35 @@
+{
+  "name": "industrial-environmental-monitoring",
+  "version": "1.0.0",
+  "description": "Real-time Industrial Environmental Monitoring System with IoT sensors and PostgreSQL database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "setup-db": "psql -d environmental_monitoring -f database_schema.sql",
+    "load-data": "psql -d environmental_monitoring -f insert_sample_data.sql"
+  },
+  "keywords": [
+    "iot",
+    "environmental-monitoring",
+    "real-time",
+    "postgresql",
+    "raspberry-pi",
+    "sensors"
+  ],
+  "author": "Environmental Monitoring Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "pg": "^8.11.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
